@@ -79,7 +79,11 @@
 
   /* ---------- edit mode ---------- */
   #bar[hidden] { display:none; }
-  #bar { position:fixed; right:16px; bottom:16px; display:flex; gap:8px; z-index:10; font:13px ui-sans-serif,system-ui; }
+  .resume { position:fixed; right:16px; bottom:16px; z-index:10; font:13px ui-sans-serif,system-ui; text-decoration:none;
+    color:var(--fg); background:var(--bg); border:1px solid var(--tl); border-radius:999px; padding:8px 16px;
+    transition:background .2s, color .2s; }
+  .resume:hover { background:var(--fg); color:var(--bg); }
+  #bar { position:fixed; left:16px; bottom:16px; display:flex; gap:8px; z-index:10; font:13px ui-sans-serif,system-ui; }
   #bar button { background:var(--fg); color:var(--bg); border:0; border-radius:8px; padding:8px 14px; cursor:pointer; font:inherit; }
   #bar button.ghost { background:var(--bg); color:var(--fg); border:1px solid var(--line); }
   .editing [contenteditable] { outline:1px dashed transparent; border-radius:3px; }
@@ -166,6 +170,8 @@
   <p class="sub entry" id="entry" data-edit>Hi, I'm Teddy Stamatakos and I am an undergraduate student at UCLA studying economics. First and foremost I grew up in San Francisco, so it's to no surprise that my interests are in tech, innovation, and software and that these are the fields I principally work in. At the same time I am passionate about the arts; specifically film, design, and screenwriting, and I suppose prose if you would constitute it as an art. Three of my favorite books are <em>The Alchemist</em> by Paulo Coelho, <em>The Road to Wigan Pier</em> by George Orwell, and <em>Steve Jobs</em> by Walter Isaacson. With that in mind it's also to no surprise that I strongly believe in pursuing one's own dreams, mine being to blend technology, art and culture to promote a more liberated society.</p>
 
 </main>
+
+<a class="resume" href="TS_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
 
 <div id="bar" hidden="">
   <button class="ghost" id="toggle">Edit</button>
